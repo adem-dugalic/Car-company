@@ -52,6 +52,7 @@ body
 }
 
 .navigation .logo{
+    cursor: pointer;
     display: flex;
     align-items: center;
 
