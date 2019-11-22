@@ -34,7 +34,7 @@ menu.addEventListener('click', function(){
 	function playy(){
     document.getElementById("player").play();
 	}
-	var start = document.getElementById('Header');
+	var start = document.getElementById('play');
 	start.addEventListener('click',playy)
 
 
