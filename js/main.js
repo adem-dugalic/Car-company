@@ -30,3 +30,12 @@ menu.addEventListener('click', function(){
 	menu.classList.toggle('toggle');
 
 });
+
+	function playy(){
+    document.getElementById("player").play();
+	}
+	var start = document.getElementById('Header');
+	start.addEventListener('click',playy)
+
+
+
