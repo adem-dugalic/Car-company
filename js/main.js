@@ -1,9 +1,14 @@
 var fade = document.getElementById('top');
 
 window.addEventListener('scroll', function(){
-	fade.style.opacity = 1- +window.pageYOffset/550+'';
+	if(window.screen.width<760){
+
+	}else{
+		fade.style.opacity = 1- +window.pageYOffset/550+'';
 	fade.style.top = +window.pageYOffset+'px';
 	fade.style.backgroundPositionY = - +window.pageYOffset/2+'px';
+	}
+	
 });
 
 

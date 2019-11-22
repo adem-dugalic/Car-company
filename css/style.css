@@ -214,6 +214,11 @@ body
 					 0 0 160px #fff;
 	}				 
 }
+@media screen and (max-width: 768px){
+    #title-text{
+        font-size: 4em;
+    }
+}
 
 /* SKeri x */
 
@@ -592,14 +597,23 @@ body
 }
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 768px){
+    #top{
+        background-size: 900px 100%;
+    }
+}
+
+@media screen and (max-width: 1270px){
+
+
     .Section3-right{
     visibility: hidden;
     grid-column-end: span 0;
     }
-    .Section3-left{
-        grid-column-end: span 2;
+    .Section3 .Section3-left{
+        grid-column-end: span 3;
         right:10%;
+        height: 87%;
     }
 
 
@@ -607,9 +621,10 @@ body
     visibility: hidden;
     grid-column-end: span 0;
     }
-    .Section2-left{
-        grid-column-end: span 2;
+    .Section2 .Section2-left{
+        grid-column-end: span 3;
         right:10%;
+        height: 87%;
     }
 
 
@@ -617,10 +632,13 @@ body
     visibility: hidden;
     grid-column-end: span 0;
     }
-    .Section1-left{
-        grid-column-end: span 2;
+    .Section1 .Section1-left{
+        grid-column-end: span 3;
         right:10%;
+        height: 87%;
     }
     
 }
+
+
 
