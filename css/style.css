@@ -702,6 +702,12 @@ body
     }
 }
 
+@media screen and (max-width: 400px){
+     #title-text{
+        font-size: 2em;
+    }
+}
+
 @media screen and (max-width: 1270px){
 
 
