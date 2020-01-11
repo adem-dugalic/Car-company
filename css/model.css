@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html{
+  overflow-x: hidden !important;
+ }
+#body, html{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+/*Navigation*/
+.navigation{
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(255,255,255,0);
+}
+
+.navigation .links{
+    z-index: 3;
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.links a{
+    color: #000;
+}
+
+.navigation .logo{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+}
+
+.navigation .logo img{
+    width: 13vh;
+    height: 8vh;
+}
+
+.navigation .logo h2{
+    color: #000;
+    text-transform: uppercase;
+}
+
+.navigation ul li{
+    list-style: none;
+    font-weight: 900;
+}
+
+.menu{
+    z-index: 2;
+    display: none;
+    cursor: pointer;
+    
+}
+
+.menu div{
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin:5px;
+
+}
+
+@media screen and (max-width: 1446px){
+    .navigation .links{
+    width: 70%;
+    }
+    
+}
+
+@media screen and (max-width: 1023px){
+    .navigation .links{
+    width: 80%;
+    }
+    
+}
+
+@media screen and (max-width: 867px){
+    .navigation .links{
+    width: 90%;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+    .links{
+      border-radius: 10%;
+        position: absolute;
+        right: 0;
+        height: 80vh;
+        top: 8vh;
+        background-color: rgb(0,0,0);
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+
+    }
+    .links li{
+        opacity: 0;
+    }
+    .links a{
+      color: #fff;
+      font-size: 18px; 
+    }
+    .menu{
+        display: block;
+    }
+
+    .navigation-active{
+        transform: translateX(0%);
+    }
+
+    @keyframes Fade{
+
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-5px,6px);
+    }
+    .toggle .line2{
+        opacity: 0;
+    }
+    .toggle .line3{
+        transform: rotate(45deg) translate(-5px,-6px);
+    }
+}
+
+
+
+
+
+.white-container1{
+  min-height:100vh;
+  min-width: 100%;
+  background-color: #F09400;
+  color:#000;
+  text-align: center;
+}
+
+.Section-title{
+  font-family: 'Bebas Neue', cursive;
+ text-align: center;
+ margin-top: 3%;
+}
+
+.black{
+  color: black;
+  text-transform:uppercase;
+  font-weight: bold;
+}
+
+#mail{
+  text-decoration: none;
+  color:#177FE8;
+}
+
+.info-container{
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#mX{
+  width: 45%;
+  height: auto;
+  margin-bottom: 5%;
+  margin-left: 5%;
+}
+
+
+.about{
+  text-align: center;
+  flex-direction: left;
+  width: 45%;
+
+}
+
+
+.section{
+  text-align:center;
+  padding:50px 80px;
+  margin: 0;
+}
+
+@media screen and (max-width: 991px){
+    .about{
+      margin-bottom: 2%;
+    }
+  }
+
+@media screen and (max-width: 913px){
+    .info-container{
+    flex-direction: column;
+    align-items: center;
+    }
+    #mX{
+    width: 60%;
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 5%;
+    }
+    .about{
+    margin-top: 3%;
+    margin-bottom: 5%;
+  }
+    
+}
+
+.colors{
+  padding: 30px;
+}
+
+.colors label{
+  
+}
+
+.colors label{
+  padding-right: 20px;
+}
+
+
+#red{
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  font-weight: 900;
+}
+#blue{
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  font-weight: 900;
+}
+#black{
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-weight: 900;
+}
+
+#default{
+  padding: 10px 20px;
+  background-color: #666;
+  color: white;
+  font-weight: 900;
+}
+
+.wheels{
+  padding: 30px;
+}
+
+#type1{
+padding: 10px 20px;
+  background-color: #666;
+  color: white;
+  font-weight: 900;
+}
+#type2{
+  padding: 10px 20px;
+  background-color: #000;
+  color: white;
+  font-weight: 900;
+}
+
+.buying{
+  padding: 30px;
+}
+
+#buy{
+  padding: 15px 40px;
+  background-color: green;
+  color: white;
+  font-weight: 900;
+}

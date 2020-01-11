@@ -1,16 +1,3 @@
-var fade = document.getElementById('top');
-
-window.addEventListener('scroll', function(){
-	if(window.screen.width<760){
-
-	}else{
-		fade.style.opacity = 1- +window.pageYOffset/550+'';
-	fade.style.top = +window.pageYOffset+'px';
-	fade.style.backgroundPositionY = - +window.pageYOffset/2+'px';
-	}
-	
-});
-
 
 var menu = document.querySelector('.menu');
 var nav = document.querySelector('.links');
@@ -61,71 +48,71 @@ var price = document.getElementById("price");
 
 black.addEventListener('click', function(){
 	if(type){
-		img.src = "img/model3matteT.png";
+		img.src = "img/modelxlMatteT.png";
 	}else{
-		img.src = "img/model3matte.png";
+		img.src = "img/modelxlMatte.png";
 	}
 	
 	ColorX = 500;
-	price.innerHTML = ((ColorX+type)+35000)+"$";
+	price.innerHTML = ((ColorX+type)+95000)+"$";
 });
 red.addEventListener('click', function(){
 	if(type){
-		img.src = "img/model3redT.png";
+		img.src = "img/modelxlRedT.png";
 	}else{
-		img.src = "img/model3red.png";
+		img.src = "img/modelxlRed.png";
 	}
 	
 	ColorX = 350;
-	price.innerHTML = ((ColorX+type)+35000)+"$";
+	price.innerHTML = ((ColorX+type)+95000)+"$";
 });
 blue.addEventListener('click', function(){
 	if(type){
-		img.src = "img/model3blueT.png";
+		img.src = "img/modelxlBlueT.png";
 	}else{
-		img.src = "img/model3blue.png";
+		img.src = "img/modelxlBlue.png";
 	}
 	
 	ColorX = 300;
-	price.innerHTML = ((ColorX+type)+35000)+"$";
+	price.innerHTML = ((ColorX+type)+95000)+"$";
 });
 defaul.addEventListener('click', function(){
 	if(type){
-		img.src = "img/model3T.png";
+		img.src = "img/modelxlT.png";
 	}else{
-		img.src = "img/model3.png";
+		img.src = "img/modelxl.png";
 	}
 	
 	ColorX = 0;
-	price.innerHTML = ((ColorX+type)+35000)+"$";
+	price.innerHTML = ((ColorX+type)+95000)+"$";
 });
 
 
 
 type1.addEventListener('click', function(){
 	if(ColorX == 0){
-		img.src = "img/model3.png";
+		img.src = "img/modelxl.png";
 	}else if(ColorX == 300){
-		img.src = "img/model3blue.png";
+		img.src = "img/modelxlBlue.png";
 	}else if(ColorX == 350){
-		img.src = "img/model3red.png";
+		img.src = "img/modelxlRed.png";
 	}else if(ColorX == 500){
-		img.src = "img/model3matte.png";
+		img.src = "img/modelxlMatte.png";
 	}
 	type= 0;
-	price.innerHTML = ((ColorX+type)+35000)+"$";
+	price.innerHTML = ((ColorX+type)+95000)+"$";
 });
 type2.addEventListener('click', function(){
 	if(ColorX == 0){
-		img.src = "img/model3T.png";
+		img.src = "img/modelxlT.png";
 	}else if(ColorX == 300){
-		img.src = "img/model3blueT.png";
+		img.src = "img/modelxlBlueT.png";
 	}else if(ColorX == 350){
-		img.src = "img/model3redT.png";
+		img.src = "img/modelxlRedT.png";
 	}else if(ColorX == 500){
-		img.src = "img/model3matteT.png";
+		img.src = "img/modelxlMatteT.png";
 	}
 	type = 1000;
-	price.innerHTML = ((ColorX+type)+35000)+"$";
+	price.innerHTML = ((ColorX+type)+95000)+"$";
 });
 

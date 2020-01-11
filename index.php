@@ -10,7 +10,7 @@
 <body lang="en" data-gr-c-s-loaded="true">
 	<div class="Header-div" id="Header">
 		<audio id="player" autoplay>
-    		<source src="mp3/CarSound.mp3" type="audio/mp3">
+    		<source src="mp3/carSound.mp3" type="audio/mp3">
 		</audio>
 		<div id="top">
 			<div class="navigation">
@@ -65,7 +65,7 @@
 					<h3 class="Section-title">MODEL SKERI X</h3>
 					<p class="Section-p"> Safety is the most important part of the overall Model X design. The metal structure is a combination of aluminum and steel, for maximum strength in every area. In a roof-crush test, Model X resisted four times its own mass, even with an all-glass roof: that's the same weight as two full-grown African elephants.
 					</p>
-					<a class="Link-button" href="#">Read more</a>
+					<a class="Link-button" href="modelX.html">Read more</a>
 				</div>
 			</div>
 			<div class="Section1-right"></div>
@@ -77,7 +77,7 @@
 					<h3 class="Section-title">MODEL SKERI XL</h3>
 					<p class="Section-p"> Safety is the most important part of the overall Model X design. The metal structure is a combination of aluminum and steel, for maximum strength in every area. In a roof-crush test, Model X resisted four times its own mass, even with an all-glass roof: that's the same weight as two full-grown African elephants.
 					</p>
-					<a class="Link-button" href="#">Read more</a>
+					<a class="Link-button" href="modelXL.html">Read more</a>
 				</div>
 			</div>
 			<div class="Section2-right"></div>
@@ -89,7 +89,7 @@
 					<h3 class="Section-title">MODEL SKERI XS</h3>
 					<p class="Section-p"> Safety is the most important part of the overall Model X design. The metal structure is a combination of aluminum and steel, for maximum strength in every area. In a roof-crush test, Model X resisted four times its own mass, even with an all-glass roof: that's the same weight as two full-grown African elephants.
 					</p>
-					<a class="Link-button" href="#">Read more</a>
+					<a class="Link-button" href="modelXS.html">Read more</a>
 				</div>
 			</div>
 			<div class="Section3-right"></div>
@@ -116,19 +116,19 @@
 			</div>
 		</div>
 			<div class="Footer-send">
-					<form action="#">
+					<form action="index.php" method="post">
 					    <label for="fname">First Name</label>
-					    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+					    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
 
 					    <label for="lname">Last Name</label>
-					    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+					    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
 
 					    <label for="email">Email</label>
-					    <input type="text" id="Email" name="lastname" placeholder="Your Email..">
+					    <input type="text" id="Email" name="email" placeholder="Your Email.." required>
 					    <label for="subject">Subject</label>
-					    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+					    <textarea id="subject" name="message" placeholder="Write something.." style="height:200px"></textarea required>
 
-					    <input type="submit" value="Submit" id="btn">
+					    <input type="submit" value="Submit" name="submit" id="btn">
 					 </form>
 			</div>
 	</div>
@@ -143,3 +143,43 @@
 
 </body>
 </html>
+
+
+
+
+
+<?php
+	require 'PHPMailer-master/PHPMailerAutoload.php';
+if(isset($_POST['submit'])){
+	$name =  $_POST['firstname'];
+	$surname =  $_POST['lastname'];
+    $email = $_POST['email'];
+    $mailSub = "Skerigati";
+    $mailMsg = $_POST['message'];
+
+
+    $mail = new PHPMailer();
+     $mail ->IsSmtp();
+     $mail ->SMTPDebug = 0;
+     $mail ->SMTPAuth = true;
+     $mail ->SMTPSecure = 'ssl';
+     $mail ->Host = "smtp.gmail.com";
+     $mail ->Port = 465; // or 587
+     $mail ->IsHTML(true);
+     $mail ->Username = "DevIUS.ius@gmail.com";
+     $mail ->Password = "**************";
+     $mail ->SetFrom("DevIUS.ius@gmail.com");
+     $mail ->Subject = $mailSub;
+     $mail ->Body = $name." ".$surname."<br>".$email."<br><br>".$mailMsg;
+     $mail ->AddAddress("dugalice@gmail.com");
+
+
+   if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+     $mail->Send();
+  }else{
+    echo '<script type="text/javascript"> alert("not a valid email") </script> ';
+  }
+
+
+ }
+?>
