@@ -1,9 +1,7 @@
 # Car-company
-Project 1 for Web
 
+This is a simple car delership website. It allowes the user to view the cars, choose color and wheels.
 
-https://skeri123.github.io/Car-company/
-
-OR Better link with sound working
+## Working example (just for testing)
 
 https://car-comp.netlify.com/
